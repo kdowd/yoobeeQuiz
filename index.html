@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
+
+    <style>
+      html,
+      body {
+        background-image: linear-gradient(#6d5b5b 40%, #55544f);
+        min-height: 100dvh;
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        color: snow;
+      }
+
+      .quiz-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        padding: 2rem;
+      }
+
+      .question sl-radio {
+        padding: 12px;
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .question sl-radio-group fieldset {
+        border-style: hidden;
+      }
+
+      .letter {
+        display: inline-block;
+        padding-right: 18px;
+      }
+
+      pre {
+        color: black;
+        font-style: italic;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        margin: 0;
+        background-color: cornsilk;
+        display: inline-block;
+        padding: 12px;
+        border: 1px solid darkslategrey;
+      }
+
+      header {
+        background-color: black;
+        color: snow;
+        font-size: 2.4rem;
+        padding: 1rem;
+        h2 {
+          margin: 0;
+          text-align: center;
+        }
+      }
+
+      /* #label.form-control__label slot[name~="label"] {
+        font-size: 3rem !important;
+      } */
+      /* #test slot[name*="lable"] {
+        font-size: 2rem;
+      } */
+    </style>
+  </head>
+  <body id="test">
+    <header>
+      <h2>MCQ's 1-12</h2>
+    </header>
+    <div class="quiz-wrapper">
+      <!--https://shoelace.style/components/radio-group-->
+      <!-- https://kdowd.yoobeestudent.net/mcq/mcqs_090823.txt -->
+      <section class="question">
+        <sl-radio-group label="Q1" name="q1">
+          <fieldset>Which of the following is the correct way to declare a variable of type 'double' in C++?</fieldset>
+          <sl-radio value="a"><span class="letter">a)</span> double varName;</sl-radio>
+          <sl-radio value="b"><span class="letter">b)</span> varName double;</sl-radio>
+          <sl-radio value="c"><span class="letter">c)</span> double = varName</sl-radio>
+          <sl-radio value="d"><span class="letter">d)</span> varName = double;</sl-radio>
+        </sl-radio-group>
+      </section>
+      <!-- end q1 -->
+      <section class="question">
+        <sl-radio-group label="Q2" name="q2">
+          <fieldset>
+            <p>You want to find the length of the userName variable the following code, using standard C++?</p>
+            <div class="user-question">
+              <pre>
+string userName;
+cin >> userName;
+              </pre>
+            </div>
+          </fieldset>
+          <sl-radio value="a"><span class="letter">a)</span> double varName;</sl-radio>
+          <sl-radio value="b"><span class="letter">b)</span> varName double;</sl-radio>
+          <sl-radio value="c"><span class="letter">c)</span> double = varName</sl-radio>
+          <sl-radio value="d"><span class="letter">d)</span> varName = double;</sl-radio>
+        </sl-radio-group>
+      </section>
+      <!-- end q2-->
+      <section class="question">
+        <sl-radio-group label="Q3" name="q3">
+          <fieldset>
+            <p>What is the output of the following code ?</p>
+            <div class="user-question">
+              <pre>
+int arr[] = {1, 2, 3, 4, 5}; 
+cout << arr[3] << endl; 
+              </pre>
+            </div>
+          </fieldset>
+          <sl-radio value="a"><span class="letter">a)</span> double varName;</sl-radio>
+          <sl-radio value="b"><span class="letter">b)</span> varName double;</sl-radio>
+          <sl-radio value="c"><span class="letter">c)</span> double = varName</sl-radio>
+          <sl-radio value="d"><span class="letter">d)</span> varName = double;</sl-radio>
+        </sl-radio-group>
+      </section>
+      <!-- end q3-->
+    </div>
+    <script>
+      const map1 = new Map();
+      map1.set("q1", "a");
+      map1.set("q2", "a");
+      map1.set("q3", "c");
+
+      var qw = document.querySelector(".quiz-wrapper");
+      qw.addEventListener("click", (e) => {
+        window.pigg = e.target.closest("sl-radio-group");
+        var questionRoot = e.target.closest("sl-radio-group");
+        var questionAnswer = e.target.value;
+        var isGood = false;
+
+        if (!questionRoot) return;
+        questionRoot.getAttributeNames().forEach((element) => {
+          if (element == "name") {
+            isGood = true;
+          }
+        });
+
+        if (isGood && questionAnswer) {
+          map1.set(questionRoot.getAttribute("name"), questionAnswer);
+          console.log(questionRoot.getAttribute("name"));
+          console.log(questionAnswer);
+        }
+      });
+    </script>
+  </body>
+</html>
