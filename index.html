@@ -1,606 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
-    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
 
-    <link rel="stylesheet" href="./main.css" />
-    <script defer src="./main.js"></script>
-  </head>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
+	<script type="module"
+		src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
 
-  <body id="test">
-    <header>
-      <h2>MCQ's 1-15 of 50. Time: 12 mins</h2>
-    </header>
-    <div class="quiz-wrapper">
-      <!-- start q5-->
-      <!-- ***************************************************************** -->
-      <section class="question">
-        <sl-radio-group label="Q1" name="q1">
-          <fieldset>
-            <p>What will be the output of the following C++ program?</p>
-            <div class="user-question">
-              <pre>
-#include &lt;iostream&gt;
-#include &lt;vector&gt;
-using namespace std;
+	<link rel="stylesheet" href="./main.css" />
+	<script defer src="./main.js"></script>
+</head>
 
-int main()
-{
-	float x;
-	x = 10 / 4;
-	cout << x << endl;
-  
-  
-}
-
+<body id="test">
+	<header>
+		<h2>MCQ's 16 - 29 of 50. Time: 12 mins</h2>
+	</header>
+	<div class="quiz-wrapper">
+		<!-- start q5-->
+		<!-- ***************************************************************** -->
+		<section class="question">
+			<sl-radio-group label="Q1" name="q1">
+				<fieldset>
+					<p>What is the output of the following code ?</p>
+					<div class="user-question">
+						<pre>
+int x = 10;
+int y = 3;
+double result = static_cast<double>(x) / y;
+cout << "The result is: " << result << endl;
               </pre>
-            </div>
-          </fieldset>
-          <sl-radio value="a">
-            <span class="letter">a)</span>
-            0
-          </sl-radio>
-          <sl-radio value="b">
-            <span class="letter">b)</span>
-            Compile Error
-          </sl-radio>
-          <sl-radio value="c">
-            <span class="letter">c)</span>
-            2
-          </sl-radio>
-          <sl-radio value="d">
-            <span class="letter">d)</span>
-            2.5
-          </sl-radio>
-        </sl-radio-group>
-      </section>
-      <!-- end q5-->
-      <section class="question">
-        <sl-radio-group label="Q2" name="q2">
-          <fieldset>Which of the following is the correct way to declare a variable of type 'double' in C++?</fieldset>
-          <sl-radio value="a">
-            <span class="letter">a)</span>
-            double varName;
-          </sl-radio>
-          <sl-radio value="b">
-            <span class="letter">b)</span>
-            varName double;
-          </sl-radio>
-          <sl-radio value="c">
-            <span class="letter">c)</span>
-            double = varName
-          </sl-radio>
-          <sl-radio value="d">
-            <span class="letter">d)</span>
-            varName = double;
-          </sl-radio>
-        </sl-radio-group>
-      </section>
-      <!-- end q1 -->
-      <!-- ***************************************************************** -->
-      <section class="question">
-        <sl-radio-group label="Q3" name="q3">
-          <fieldset>
-            <p>You want to find the length of the userName variable the following code, using standard C++?</p>
-            <div class="user-question">
-              <pre>
-string userName;
+					</div>
+				</fieldset>
+				<sl-radio value="a">
+					<span class="letter">a)</span>
+					The result is: 3.33333
+				</sl-radio>
+				<sl-radio value="b">
+					<span class="letter">b)</span>
+					The result is: 3.0
+				</sl-radio>
+				<sl-radio value="c">
+					<span class="letter">c)</span>
+					The result is: 3
+				</sl-radio>
+				<sl-radio value="d">
+					<span class="letter">d)</span>
+					The result is: 3.00000000
+				</sl-radio>
+			</sl-radio-group>
+		</section>
+		<!-- end q1-->
+
+		<section class="question">
+			<sl-radio-group label="Q2" name="q2">
+				<fieldset>You want to find the length of the userName variable using the standard lib in C++?
+				</fieldset>
+				<div class="user-question">
+					<pre>
+string = userName;
 cin >> userName;
-              </pre>
-            </div>
-          </fieldset>
-          <sl-radio value="a">
-            <span class="letter">a)</span>
-            int len = userName.count();
-          </sl-radio>
-          <sl-radio value="b">
-            <span class="letter">b)</span>
-            int len = userName.length();
-          </sl-radio>
-          <sl-radio value="c">
-            <span class="letter">c)</span>
-            int len = strlen(userName);
-          </sl-radio>
-          <sl-radio value="d">
-            <span class="letter">d)</span>
-            int len = sizeof(userName);
-          </sl-radio>
-        </sl-radio-group>
-      </section>
-      <!-- end q2-->
+</pre>
+				</div>
 
-      <section class="question">
-        <sl-radio-group label="Q4" name="q4">
-          <fieldset>
-            <p>Identify the scope resolution operator.</p>
-            <div class="user-question"></div>
-          </fieldset>
-          <sl-radio value="a">
-            <span class="letter">a)</span>
-            &
-          </sl-radio>
-          <sl-radio value="b">
-            <span class="letter">b)</span>
-            ::
-          </sl-radio>
-          <sl-radio value="c">
-            <span class="letter">c)</span>
-            ?:
-          </sl-radio>
-          <sl-radio value="d">
-            <span class="letter">d)</span>
-            ++
-          </sl-radio>
-        </sl-radio-group>
-      </section>
-      <!-- end q3-->
+				<sl-radio value="a">
+					<span class="letter">a)</span>
+					int len = userName.count();
+				</sl-radio>
+				<sl-radio value="b">
+					<span class="letter">b)</span>
+					int len = userName.length();
+				</sl-radio>
+				<sl-radio value="c">
+					<span class="letter">c)</span>
+					int len = strlen( userName );
+				</sl-radio>
+				<sl-radio value="d">
+					<span class="letter">d)</span>
+					int len = sizeof( userName );
+				</sl-radio>
+			</sl-radio-group>
+		</section>
+		<!-- end q2 -->
 
-      <!-- start q4-->
-      <!-- ***************************************************************** -->
-      <section class="question">
-        <sl-radio-group label="Q5" name="q5">
-          <fieldset>
-            <p>Which C++ loop is guaranteed to execute at least once?</p>
-            <div class="user-question"></div>
-          </fieldset>
-          <sl-radio value="a">
-            <span class="letter">a)</span>
-            for loop
-          </sl-radio>
-          <sl-radio value="b">
-            <span class="letter">b)</span>
-            while loop
-          </sl-radio>
-          <sl-radio value="c">
-            <span class="letter">c)</span>
-            do-while loop
-          </sl-radio>
-          <sl-radio value="d">
-            <span class="letter">d)</span>
-            no loop is guaranteed to loop at least once
-          </sl-radio>
-        </sl-radio-group>
-      </section>
-      <!-- end q4-->
 
-      <!-- start q6-->
-      <!-- ***************************************************************** -->
-      <section class="question">
-        <sl-radio-group label="Q6" name="q6">
-          <fieldset>
-            <p>What is the output of the following C++ code when the value of number is 8?</p>
-            <div class="user-question">
-              <pre>
-#include &lt;iostream&gt;
-using namespace std;
+		<!-- ***************************************************************** -->
+		<section class="question">
+			<sl-radio-group label="Q3" name="q3">
+				<fieldset>
+					<p>What is the ASCII value of the 'a' character?</p>
+
+				</fieldset>
+				<sl-radio value="a">
+					<span class="letter">a)</span>
+					0
+				</sl-radio>
+				<sl-radio value="b">
+					<span class="letter">b)</span>
+					65
+				</sl-radio>
+				<sl-radio value="c">
+					<span class="letter">c)</span>
+					1
+				</sl-radio>
+				<sl-radio value="d">
+					<span class="letter">d)</span>
+					97
+				</sl-radio>
+			</sl-radio-group>
+		</section>
+		<!-- end q2-->
+
+		<section class="question">
+			<sl-radio-group label="Q4" name="q4">
+				<fieldset>
+					<p>What is the output of the following code ?</p>
+					<div class="user-question">
+						<pre>
+int num = 7;
+string res = (num % 2 == 0 ) ? "Even" : "Odd";
+cout << res << endl;
+</pre>
+					</div>
+				</fieldset>
+				<sl-radio value="a">
+					<span class="letter">a)</span>
+					Even
+				</sl-radio>
+				<sl-radio value="b">
+					<span class="letter">b)</span>
+					Odd
+				</sl-radio>
+				<sl-radio value="c">
+					<span class="letter">c)</span>
+					7
+				</sl-radio>
+				<sl-radio value="d">
+					<span class="letter">d)</span>
+					"true"
+				</sl-radio>
+			</sl-radio-group>
+		</section>
+		<!-- end q4-->
+
+		<!-- start q5-->
+		<!-- ***************************************************************** -->
+		<section class="question">
+			<sl-radio-group label="Q5" name="q5">
+				<fieldset>
+					<p>Which of the following is a correct way to define a constant in C++?</p>
+					<div class="user-question"></div>
+				</fieldset>
+				<sl-radio value="a">
+					<span class="letter">a)</span>
+					const float MY_NUM = 3.1415;
+				</sl-radio>
+				<sl-radio value="b">
+					<span class="letter">b)</span>
+					#define MY_NUM 3.1415
+				</sl-radio>
+				<sl-radio value="c">
+					<span class="letter">c)</span>
+					global MY_NUM = 3.1415;
+				</sl-radio>
+				<sl-radio value="d">
+					<span class="letter">d)</span>
+					const int MY_NUM;
+				</sl-radio>
+			</sl-radio-group>
+		</section>
+		<!-- end q5-->
+
+		<!-- start q6-->
+		<!-- ***************************************************************** -->
+		<section class="question">
+			<sl-radio-group label="Q6" name="q6">
+				<fieldset>
+					<p>What is the output of the following code ?</p>
+					<div class="user-question">
+						<pre>
+int arr[] = { 1, 2, 3, 4, 5};
+cout << arr[3] << endl;
+</pre>
+					</div>
+				</fieldset>
+				<sl-radio value="a">
+					<span class="letter">a)</span>
+					1
+				</sl-radio>
+				<sl-radio value="b">
+					<span class="letter">b)</span>
+					2
+				</sl-radio>
+				<sl-radio value="c">
+					<span class="letter">c)</span>
+					3
+				</sl-radio>
+				<sl-radio value="d">
+					<span class="letter">d)</span>
+					4
+				</sl-radio>
+			</sl-radio-group>
+		</section>
+		<!-- end q6-->
+		<!-- start q7-->
+		<!-- ***************************************************************** -->
+		<section class="question">
+			<sl-radio-group label="Q7" name="q7">
+				<fieldset>
+					<p>Which of the following is an example of an invalid C++ variable name?</p>
+					<div class="user-question">
+					</div>
+				</fieldset>
+				<sl-radio value="a">
+					<span class="letter">a)</span>
+					my_variable
+				</sl-radio>
+				<sl-radio value="b">
+					<span class="letter">b)</span>
+					_var2
+				</sl-radio>
+				<sl-radio value="c">
+					<span class="letter">c)</span>
+					123abc
+				</sl-radio>
+				<sl-radio value="d">
+					<span class="letter">d)</span>
+					Var
+				</sl-radio>
+			</sl-radio-group>
+		</section>
+		<!-- end q7-->
+		<!-- ***************************************************************** -->
+		<section class="question">
+			<sl-radio-group label="Q8" name="q8">
+				<fieldset>
+					<p>What is the value of y in the following code ?</p>
+					<div class="user-question">
+						<pre>
+int a = 5;
+int b = 3;
+int c = 2, d = 2;
+cout << 3 - c * d << endl;
+</pre>
+					</div>
+				</fieldset>
+				<sl-radio value="a">
+					<span class="letter">a)</span>
+					-2
+				</sl-radio>
+				<sl-radio value="b">
+					<span class="letter">b)</span>
+					-1
+				</sl-radio>
+				<sl-radio value="c">
+					<span class="letter">c)</span>
+					4
+				</sl-radio>
+				<sl-radio value="d">
+					<span class="letter">d)</span>
+					-4
+				</sl-radio>
+			</sl-radio-group>
+		</section>
+		<!-- end q8-->
+		<!-- ***************************************************************** -->
+		<section class="question">
+			<sl-radio-group label="Q9" name="q9">
+				<fieldset>
+					<p>Scenario: You are implementing a game in C++. If the player loses all their lives,
+						you need to terminate the game immediately. Which statement should you use for this purpose?</p>
+					<div class="user-question">
+
+					</div>
+				</fieldset>
+				<sl-radio value="a">
+					<span class="letter">a)</span>
+					return;
+				</sl-radio>
+				<sl-radio value="b">
+					<span class="letter">b)</span>
+					break;
+				</sl-radio>
+				<sl-radio value="c">
+					<span class="letter">c)</span>
+					exit(0);
+				</sl-radio>
+				<sl-radio value="d">
+					<span class="letter">d)</span>
+					goto endloop;
+				</sl-radio>
+			</sl-radio-group>
+		</section>
+		<!-- end q9-->
+		<!-- ***************************************************************** -->
+		<section class="question">
+			<sl-radio-group label="Q10" name="q10">
+				<fieldset>
+					<p>What is the value of y in the following code?</p>
+					<div class="user-question">
+						<pre>
 
 int main()
 {
-   int number;
-   cout << "Enter a number:" << endl ;
-   cin >> number;
-   int i;  
-   for (i = 1; i < 10; i++)
-   {
-      if (i == number) {
-         break;
-      }
-      cout << i << endl;
-   }
+
+int y = 0;
+int x = 5;
+y = ++x + x++;
+std::cout << y; 
+
+}
    
-}
-</pre
-              >
-            </div>
-          </fieldset>
-          <sl-radio value="a">
-            <span class="letter">a)</span>
-            No output
-          </sl-radio>
-          <sl-radio value="b">
-            <span class="letter">b)</span>
-            1 2 3 4 5 6 7 9
-          </sl-radio>
-          <sl-radio value="c">
-            <span class="letter">c)</span>
-            7 8 9
-          </sl-radio>
-          <sl-radio value="d">
-            <span class="letter">d)</span>
-            1 2 3 4 5 6 7
-          </sl-radio>
-        </sl-radio-group>
-      </section>
-      <!-- end q6-->
-      <!-- start q7-->
-      <!-- ***************************************************************** -->
-      <section class="question">
-        <sl-radio-group label="Q7" name="q7">
-          <fieldset>
-            <p>What would be the output of the following program?</p>
-            <div class="user-question">
-              <pre>
-#include &lt;iostream>
-using namespace std;
+</pre>
+					</div>
+				</fieldset>
+				<sl-radio value="a">
+					<span class="letter">a)</span>
+					5
+				</sl-radio>
+				<sl-radio value="b">
+					<span class="letter">b)</span>
+					12
+				</sl-radio>
+				<sl-radio value="c">
+					<span class="letter">c)</span>
+					0
+				</sl-radio>
+				<sl-radio value="d">
+					<span class="letter">d)</span>
+					13
+				</sl-radio>
+			</sl-radio-group>
+		</section>
 
-int main()
+		<section class="question">
+			<sl-radio-group label="Q11" name="q11">
+				<fieldset>
+					<p>What does the "const" keyword mean in C++ ?</p>
+					<div class="user-question"></div>
+				</fieldset>
+				<sl-radio value="a">
+					<span class="letter">a)</span>
+					It indicates that a variable's value cannot be changed once initialized.
+				</sl-radio>
+				<sl-radio value="b">
+					<span class="letter">b)</span>
+					It specifies that a function cannot modify the class members.
+				</sl-radio>
+				<sl-radio value="c">
+					<span class="letter">c)</span>
+					It declares a constant variable, but we can change it if we really want to.
+				</sl-radio>
+				<sl-radio value="d">
+					<span class="letter">d)</span>
+					It denotes a pointer to a constant value.
+				</sl-radio>
+			</sl-radio-group>
+		</section>
+		<!-- end q11-->
+		<section class="question">
+			<sl-radio-group label="Q12" name="q12">
+				<fieldset>
+					<p>What will be the output of the following C++ code ?</p>
+					<div class="user-question">
+						<pre>
+int main ()
 {
-    int x = 4;
-    int y = 6;
-    add( x, y);
-    
-}
-
-void add(int num1, int num2 ){
-    cout << (num1 + num2 ) << endl;
-}
-              </pre>
-            </div>
-          </fieldset>
-          <sl-radio value="a">
-            <span class="letter">a)</span>
-            10
-          </sl-radio>
-          <sl-radio value="b">
-            <span class="letter">b)</span>
-            Compilation Error
-          </sl-radio>
-          <sl-radio value="c">
-            <span class="letter">c)</span>
-            46
-          </sl-radio>
-          <sl-radio value="d">
-            <span class="letter">d)</span>
-            0
-          </sl-radio>
-        </sl-radio-group>
-      </section>
-      <!-- end q7-->
-      <!-- ***************************************************************** -->
-      <section class="question">
-        <sl-radio-group label="Q8" name="q8">
-          <fieldset>
-            <p>What is the value of y in the following code ?</p>
-            <div class="user-question">
-              <pre>
- #include &lt;iostream&gt;
-
-int main() {
-	int y = 0;
-	int x = 5;
-
-	y = x++;
-	y += x;
-
-	std::cout << y;
-	
-
-
-}
-</pre
-              >
-            </div>
-          </fieldset>
-          <sl-radio value="a">
-            <span class="letter">a)</span>
-            5
-          </sl-radio>
-          <sl-radio value="b">
-            <span class="letter">b)</span>
-            11
-          </sl-radio>
-          <sl-radio value="c">
-            <span class="letter">c)</span>
-            12
-          </sl-radio>
-          <sl-radio value="d">
-            <span class="letter">d)</span>
-            13
-          </sl-radio>
-        </sl-radio-group>
-      </section>
-      <!-- end q8-->
-      <!-- ***************************************************************** -->
-      <section class="question">
-        <sl-radio-group label="Q9" name="q9">
-          <fieldset>
-            <p>What is the console output in the following code ?</p>
-            <div class="user-question">
-              <pre>
-#include &lt;iostream&gt;
-#include &lt;string&gt;
-using namespace std;
-
-int main() {
-	string str("Yoobee Colleges.");
-	str.back() = '!';
-	cout << str << endl;
-	
-
-}	
-</pre
-              >
-            </div>
-          </fieldset>
-          <sl-radio value="a">
-            <span class="letter">a)</span>
-            Yoobee Colleges!.
-          </sl-radio>
-          <sl-radio value="b">
-            <span class="letter">b)</span>
-            Yoobee Colleges!
-          </sl-radio>
-          <sl-radio value="c">
-            <span class="letter">c)</span>
-            Yoobee Colleges.
-          </sl-radio>
-          <sl-radio value="d">
-            <span class="letter">d)</span>
-            Yoobee Colleges.!
-          </sl-radio>
-        </sl-radio-group>
-      </section>
-      <!-- end q9-->
-      <!-- ***************************************************************** -->
-      <section class="question">
-        <sl-radio-group label="Q10" name="q10">
-          <fieldset>
-            <p>What is the value of x ?</p>
-            <div class="user-question">
-              <pre>
-
-	int y = 10;
-	int z = 4;
-	int x{};
-
-	switch (y - 10)
-	{
-	case 8:
-		x = y + z;
-		break;
-	case 9:
-		x = y;
-		break;
-	case 10:
-		x = z;
-		break;
-	default:
-		x = y * 2;
-	}
-
-	cout << x;
-   
-</pre
-              >
-            </div>
-          </fieldset>
-          <sl-radio value="a">
-            <span class="letter">a)</span>
-            20
-          </sl-radio>
-          <sl-radio value="b">
-            <span class="letter">b)</span>
-            42
-          </sl-radio>
-          <sl-radio value="c">
-            <span class="letter">c)</span>
-            35
-          </sl-radio>
-          <sl-radio value="d">
-            <span class="letter">d)</span>
-            45
-          </sl-radio>
-        </sl-radio-group>
-      </section>
-
-      <section class="question">
-        <sl-radio-group label="Q11" name="q11">
-          <fieldset>
-            <p>Which of the following options generates a random number in the range 1 to 10 ?</p>
-            <div class="user-question"></div>
-          </fieldset>
-          <sl-radio value="a">
-            <span class="letter">a)</span>
-            rand() % 10 - 1
-          </sl-radio>
-          <sl-radio value="b">
-            <span class="letter">b)</span>
-            rand() % 10
-          </sl-radio>
-          <sl-radio value="c">
-            <span class="letter">c)</span>
-            rand() % 1 + 10
-          </sl-radio>
-          <sl-radio value="d">
-            <span class="letter">d)</span>
-            rand() % 10 + 1
-          </sl-radio>
-        </sl-radio-group>
-      </section>
-      <!-- end q11-->
-      <section class="question">
-        <sl-radio-group label="Q12" name="q12">
-          <fieldset>
-            <p>What would be the output of the following program?</p>
-            <div class="user-question">
-              <pre>
- #include &lt;iostream&gt;
-using namespace std;
-
- void square( int& x )
-{
-	x = (x) * (x);
-}
-int main()
-{
-	int num = 10;
-	square( num );
-	cout << num;
-	
+int a{}, b{}, c{};
+a = 2;
+b = 7;
+c = (a > b) ? a : b;
+cout << c; 
 }
  
- </pre
-              >
-            </div>
-          </fieldset>
-          <sl-radio value="a">
-            <span class="letter">a)</span>
-            100
-          </sl-radio>
-          <sl-radio value="b">
-            <span class="letter">b)</span>
-            compile time error
-          </sl-radio>
-          <sl-radio value="c">
-            <span class="letter">c)</span>
-            144
-          </sl-radio>
-          <sl-radio value="d">
-            <span class="letter">d)</span>
-            10
-          </sl-radio>
-        </sl-radio-group>
-      </section>
-      <!-- end q12-->
+ </pre>
+					</div>
+				</fieldset>
+				<sl-radio value="a">
+					<span class="letter">a)</span>
+					9
+				</sl-radio>
+				<sl-radio value="b">
+					<span class="letter">b)</span>
+					0
+				</sl-radio>
+				<sl-radio value="c">
+					<span class="letter">c)</span>
+					7
+				</sl-radio>
+				<sl-radio value="d">
+					<span class="letter">d)</span>
+					true
+				</sl-radio>
+			</sl-radio-group>
+		</section>
+		<!-- end q12-->
 
-      <section class="question">
-        <sl-radio-group label="Q13" name="q13--">
-          <fieldset>
-            <p>Which of the following concatenate two string objects in C++?</p>
-            <div class="user-question">
-              <pre>
-// Example 1:
-string s1 = "hello";
-string s2 = "world";
-string s3 = s1 + s2;
+		<section class="question">
+			<sl-radio-group label="Q13" name="q13--">
+				<fieldset>
+					<p>Which one of these C++ libraries is not part of Standard Lib ?</p>
+					<div class="user-question">
+					</div>
 
-// Example 2:
-string s1 = "hello";
-string s2 = "world";
-string s3 = s1.append(s2);
+				</fieldset>
+				<sl-radio value="a">
+					<span class="letter">a)</span>
+					&lt;string&gt;
+				</sl-radio>
+				<sl-radio value="b">
+					<span class="letter">b)</span>
+					&lt;vector&gt;
+				</sl-radio>
+				<sl-radio value="c">
+					<span class="letter">c)</span>
+					&lt;algorithm&gt;
+				</sl-radio>
+				<sl-radio value="d">
+					<span class="letter">d)</span>
+					&lt;windows.h&gt;
+				</sl-radio>
+			</sl-radio-group>
+		</section>
+		<!-- end q13-->
 
-// Example 3:
-string s1 = "hello";
-string s2 = "world";
-string s3 = strcat(s1,s2);
- </pre
-              >
-            </div>
-          </fieldset>
-          <sl-radio value="a">
-            <span class="letter">a)</span>
-            1 and 2
-          </sl-radio>
-          <sl-radio value="b">
-            <span class="letter">b)</span>
-            2 and 3
-          </sl-radio>
-          <sl-radio value="c">
-            <span class="letter">c)</span>
-            1 and 3
-          </sl-radio>
-          <sl-radio value="d">
-            <span class="letter">d)</span>
-            1, 2 and 3
-          </sl-radio>
-        </sl-radio-group>
-      </section>
-      <!-- end q13-->
-      <section class="question">
-        <sl-radio-group label="Q14" name="q14">
-          <fieldset>
-            <p>What will be the output of the following C++ program?</p>
-            <div class="user-question">
-              <pre>
-#include &lt;iostream&gt;
-#include &lt;vector&gt;
-using namespace std;
+	</div>
+</body>
 
-int main()
-{
-  vector&lt;int&gt myNumberVector = { 0, 2, 4, 6, 7, 5, 3 };
-	int n{};
-	int result{};
-  
-	for (n = 0; n < 8; n++)
-	{
-		result += myNumberVector[n];
-	}
-	cout << result;
-	
-}
- </pre
-              >
-            </div>
-          </fieldset>
-          <sl-radio value="a">
-            <span class="letter">a)</span>
-            Compile Error
-          </sl-radio>
-          <sl-radio value="b">
-            <span class="letter">b)</span>
-            27
-          </sl-radio>
-          <sl-radio value="c">
-            <span class="letter">c)</span>
-            26
-          </sl-radio>
-          <sl-radio value="d">
-            <span class="letter">d)</span>
-            25
-          </sl-radio>
-        </sl-radio-group>
-      </section>
-      <!-- end q14-->
-
-      <section class="question">
-        <sl-radio-group label="Q15" name="q15">
-          <fieldset>
-            <p>What will be the output of the following C++ program?</p>
-            <div class="user-question">
-              <pre>
- #include &lt;iostream&gt;
-using namespace std;
-
-
-int main()
-{
-	int a = 5;
-	float b = 1.0;
-	cout << sizeof( (a + b) ) << ", ";
-	cout << a;
-	
-}
- 
- </pre
-              >
-            </div>
-          </fieldset>
-          <sl-radio value="a">
-            <span class="letter">a)</span>
-            2, 5
-          </sl-radio>
-          <sl-radio value="b">
-            <span class="letter">b)</span>
-            4, 5
-          </sl-radio>
-          <sl-radio value="c">
-            <span class="letter">c)</span>
-            4, 6
-          </sl-radio>
-          <sl-radio value="d">
-            <span class="letter">d)</span>
-            2, 6
-          </sl-radio>
-        </sl-radio-group>
-      </section>
-      <!-- end q15-->
-    </div>
-  </body>
 </html>
 
 <!-- To avoid reloading mobile application by accidentally swipe/drag of the screen (eg. google maps, images and any other stable content) this css trick can be usefull:

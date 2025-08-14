@@ -68,6 +68,6 @@ const beforeUnloadHandler = (event) => {
   event.returnValue = true;
 };
 
-if (location.hostname != "127.0.0.1") {
-  window.addEventListener("beforeunload", beforeUnloadHandler);
+if (location.hostname != "http://127.0.0.63/") {
+  // window.addEventListener("beforeunload", beforeUnloadHandler);
 }
