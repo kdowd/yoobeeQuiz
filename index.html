@@ -26,28 +26,35 @@
 					<p>What is the output of the following code ?</p>
 					<div class="user-question">
 						<pre>
-int x = 10;
-int y = 3;
-double result = static_cast&lt;double&gt;(x) / y;
-cout << "The result is: " << result << endl;
+#include <iostream>
+
+void foo(float n) { std::cout << 66; };
+void foo(double n) { std::cout << 99; };
+								  
+int main() {
+    foo(2.5);
+    foo(2.5f);
+
+}
+
               </pre>
 					</div>
 				</fieldset>
 				<sl-radio value="a">
 					<span class="letter">a)</span>
-					The result is: 3.33333
+					9966
 				</sl-radio>
 				<sl-radio value="b">
 					<span class="letter">b)</span>
-					The result is: 3.0
+					6699
 				</sl-radio>
 				<sl-radio value="c">
 					<span class="letter">c)</span>
-					The result is: 3
+					Compilation error.
 				</sl-radio>
 				<sl-radio value="d">
 					<span class="letter">d)</span>
-					The result is: 3.00000000
+					6666
 				</sl-radio>
 			</sl-radio-group>
 		</section>
